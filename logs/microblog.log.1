@@ -1,0 +1,126 @@
+2021-06-18 01:28:49,541 ERROR: Exception on / [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\acer\microblog\app\main\routes.py", line 33, in index
+    return render_template('index.html',title=_("home page"),form=form,posts=posts.items,next_url=next_url,prev_url=prev_url)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\acer\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\acer\microblog\app\templates\base.html", line 42, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'elif' or 'else' or 'endif'. The innermost block that needs to be closed is 'if'.
+2021-06-18 01:30:11,005 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 01:30:18,518 ERROR: Exception on /search [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\acer\microblog\app\main\routes.py", line 140, in search
+    return render_template('search.html',title='Search',posts=posts,next_url=next_url,prev_url=prev_url)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: search.html
+2021-06-18 01:30:34,181 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 01:30:41,274 ERROR: Exception on /search [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\acer\microblog\app\main\routes.py", line 140, in search
+    return render_template('search.html',title='Search',posts=posts,next_url=next_url,prev_url=prev_url)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: search.html
+2021-06-18 01:31:19,256 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 11:19:38,796 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 11:19:39,724 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 11:22:16,701 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 11:22:17,658 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 12:02:33,676 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 12:02:34,424 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 12:03:46,501 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 12:04:08,983 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 12:04:32,822 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 12:05:03,546 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 12:05:04,382 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 15:26:48,588 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 15:26:49,304 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-19 13:16:05,168 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:81]
+2021-06-19 13:16:05,960 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:81]
+2021-06-19 15:22:06,567 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:81]
+2021-06-19 15:22:07,402 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:81]
+2021-06-19 15:22:47,122 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:81]
+2021-06-19 17:25:56,589 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:81]
+2021-06-19 17:26:07,795 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:81]

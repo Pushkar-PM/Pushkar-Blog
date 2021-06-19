@@ -1,0 +1,116 @@
+2021-06-13 20:34:59,055 ERROR: Exception on / [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x0000018C9A8EF250 (otid=0x0000018C9A8F9840) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\acer\microblog\app\main\routes.py", line 50, in before_request
+    if current_user.is_authenticated:
+  File "c:\users\acer\microblog\.venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\werkzeug\local.py", line 306, in _get_current_object
+    return self.__local()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "C:\Users\acer\microblog\app\models.py", line 80, in load_user
+    return User.query.get(int(id))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 129, in __call__
+    return self.registry()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 4058, in __call__
+    return self.class_(**local_kw)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 593, in get_engine
+    sa_url, options = self.get_options(sa_url, echo)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 608, in get_options
+    sa_url, options = self._sa.apply_driver_hacks(self._app, sa_url, options)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 933, in apply_driver_hacks
+    if sa_url.drivername.startswith('mysql'):
+AttributeError: 'NoneType' object has no attribute 'drivername'
+2021-06-13 20:38:36,005 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-15 00:31:37,121 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-15 00:31:37,816 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-15 22:12:37,899 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-15 22:12:38,597 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-15 22:55:36,875 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-15 22:55:37,541 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-16 12:38:15,184 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-16 12:38:15,881 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-17 13:57:59,412 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:75]
+2021-06-17 13:58:00,147 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:75]
+2021-06-17 15:08:12,184 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:75]
+2021-06-17 16:15:34,010 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-17 16:15:34,847 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-17 21:17:45,555 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-17 21:17:46,243 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:76]
+2021-06-17 22:06:33,782 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-17 22:10:33,605 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-17 22:17:41,165 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-17 23:13:42,300 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-17 23:17:03,175 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:15:27,028 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:19:24,663 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:21:20,700 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:33:02,098 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:36:48,586 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:38:11,390 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:40:02,686 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:41:11,652 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:42:06,238 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:43:56,523 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 00:46:17,473 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 01:28:07,024 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]
+2021-06-18 01:28:08,730 ERROR: Exception on / [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\acer\microblog\app\main\routes.py", line 52, in before_request
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1423, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 839, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\event\attr.py", line 341, in __call__
+    fn(*args, **kw)
+  File "C:\Users\acer\microblog\app\models.py", line 91, in after_commit
+    for obj in session.changes['update']:
+AttributeError: 'SignallingSession' object has no attribute 'changes'
+2021-06-18 01:28:47,709 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:76]

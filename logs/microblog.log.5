@@ -1,0 +1,113 @@
+2021-06-13 20:19:38,957 ERROR: Exception on /auth/login [POST] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1706, in _execute_context
+    self.dialect.do_execute(
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 716, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\acer\microblog\app\auth\routes.py", line 20, in login
+    user=User.query.filter_by(username=form.username.data).first()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2750, in first
+    return self.limit(1)._iter().first()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\query.py", line 2834, in _iter
+    result = self.session.execute(
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 1670, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1521, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\sql\elements.py", line 313, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1390, in _execute_clauseelement
+    ret = self._execute_context(
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1749, in _execute_context
+    self._handle_dbapi_exception(
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1930, in _handle_dbapi_exception
+    util.raise_(
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\util\compat.py", line 211, in raise_
+    raise exception
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\engine\base.py", line 1706, in _execute_context
+    self.dialect.do_execute(
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\engine\default.py", line 716, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('susan', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+2021-06-13 20:23:07,020 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 20:23:52,172 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 20:23:53,647 ERROR: Exception on / [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x000002A54FBEC510 (otid=0x000002A54FBF7A80) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\acer\microblog\app\main\routes.py", line 50, in before_request
+    if current_user.is_authenticated:
+  File "c:\users\acer\microblog\.venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\werkzeug\local.py", line 306, in _get_current_object
+    return self.__local()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "C:\Users\acer\microblog\app\models.py", line 80, in load_user
+    return User.query.get(int(id))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 129, in __call__
+    return self.registry()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 4058, in __call__
+    return self.class_(**local_kw)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 593, in get_engine
+    sa_url, options = self.get_options(sa_url, echo)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 608, in get_options
+    sa_url, options = self._sa.apply_driver_hacks(self._app, sa_url, options)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 933, in apply_driver_hacks
+    if sa_url.drivername.startswith('mysql'):
+AttributeError: 'NoneType' object has no attribute 'drivername'
+2021-06-13 20:32:16,112 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]

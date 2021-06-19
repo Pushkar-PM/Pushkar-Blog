@@ -1,0 +1,114 @@
+2021-06-10 01:41:27,044 ERROR: Exception on /index [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\acer\microblog\app\routes.py", line 27, in index
+    return render_template('index.html',title=_("home page"),form=form,posts=posts.items,next_url=next_url,prev_url=prev_url)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\acer\microblog\app\templates\index.html", line 16, in template
+    <span aria-hidden="true">&larr;</span>{{ _'(Newer posts') }}
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got 'string'
+2021-06-10 01:41:51,979 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 01:41:52,776 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 01:43:16,168 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 01:43:16,933 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 01:44:04,611 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 01:44:29,066 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 01:44:43,887 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 15:52:38,073 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 15:52:38,732 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 15:55:15,861 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 15:55:42,749 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 15:56:01,781 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 16:45:02,351 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 16:47:18,591 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 16:47:19,328 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-10 16:48:05,615 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:55]
+2021-06-13 18:35:24,807 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 18:35:27,502 ERROR: Exception on / [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 271, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\login_manager.py", line 160, in unauthorized
+    if self.login_message:
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_babel\speaklater.py", line 24, in __len__
+    return len(str(self))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_babel\speaklater.py", line 21, in __str__
+    return str(self._func(*self._args, **self._kwargs))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_babel\__init__.py", line 689, in gettext
+    return get_domain().gettext(*args, **kwargs)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_babel\__init__.py", line 586, in gettext
+    t = self.get_translations()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_babel\__init__.py", line 554, in get_translations
+    locale = get_locale()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_babel\__init__.py", line 226, in get_locale
+    rv = babel.locale_selector_func()
+  File "C:\Users\acer\microblog\app\__init__.py", line 77, in get_locale
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+NameError: name 'app' is not defined
+2021-06-13 18:36:12,239 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 18:36:12,965 INFO: Microblog startup [in c:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 18:37:16,539 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 19:51:35,567 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 19:52:28,424 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 19:54:58,921 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 19:55:11,826 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 19:55:30,923 ERROR: Exception on /index [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\acer\microblog\app\main\routes.py", line 28, in index
+    posts = current_user.followed_posts().paginate(page,app.config['POSTS_PER_PAGE'],False)
+NameError: name 'app' is not defined
+2021-06-13 19:57:57,206 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]

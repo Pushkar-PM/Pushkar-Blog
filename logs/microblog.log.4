@@ -1,0 +1,114 @@
+2021-06-13 20:32:18,775 ERROR: Exception on / [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x000002129165C510 (otid=0x0000021291666B00) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\acer\microblog\app\main\routes.py", line 50, in before_request
+    if current_user.is_authenticated:
+  File "c:\users\acer\microblog\.venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\werkzeug\local.py", line 306, in _get_current_object
+    return self.__local()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "C:\Users\acer\microblog\app\models.py", line 80, in load_user
+    return User.query.get(int(id))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 129, in __call__
+    return self.registry()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 4058, in __call__
+    return self.class_(**local_kw)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 593, in get_engine
+    sa_url, options = self.get_options(sa_url, echo)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 608, in get_options
+    sa_url, options = self._sa.apply_driver_hacks(self._app, sa_url, options)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 933, in apply_driver_hacks
+    if sa_url.drivername.startswith('mysql'):
+AttributeError: 'NoneType' object has no attribute 'drivername'
+2021-06-13 20:34:15,391 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
+2021-06-13 20:34:16,611 ERROR: Exception on / [GET] [in c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x000001FF62D6C510 (otid=0x000001FF62D77F00) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 1948, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask\app.py", line 2242, in preprocess_request
+    rv = func()
+  File "C:\Users\acer\microblog\app\main\routes.py", line 50, in before_request
+    if current_user.is_authenticated:
+  File "c:\users\acer\microblog\.venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\werkzeug\local.py", line 306, in _get_current_object
+    return self.__local()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_login\login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "C:\Users\acer\microblog\app\models.py", line 80, in load_user
+    return User.query.get(int(id))
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 129, in __call__
+    return self.registry()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "c:\users\acer\microblog\.venv\lib\site-packages\sqlalchemy\orm\session.py", line 4058, in __call__
+    return self.class_(**local_kw)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 593, in get_engine
+    sa_url, options = self.get_options(sa_url, echo)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 608, in get_options
+    sa_url, options = self._sa.apply_driver_hacks(self._app, sa_url, options)
+  File "c:\users\acer\microblog\.venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 933, in apply_driver_hacks
+    if sa_url.drivername.startswith('mysql'):
+AttributeError: 'NoneType' object has no attribute 'drivername'
+2021-06-13 20:34:57,656 INFO: Microblog startup [in C:\Users\acer\microblog\app\__init__.py:72]
