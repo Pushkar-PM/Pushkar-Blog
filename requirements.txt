@@ -4,6 +4,7 @@ BareNecessities==0.2.8
 blinker==1.4
 certifi==2021.5.30
 click==7.1.2
+dnspython==2.1.0
 dominate==2.6.0
 elasticsearch==7.13.1
 email-validator==1.1.2
